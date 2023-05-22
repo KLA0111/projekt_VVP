@@ -112,11 +112,6 @@ def get_path_dijkstra(dijkstra, incidence):
     return res
 
 
-def delete_wall(res, x, y):
-    res[x, (y + 1) * 2 - 1] = False
-    return res
-
-
 def generate_maze(n, pattern='sidewinder', p=0.5):
     if pattern == 'sidewinder':
         res = np.ndarray((n, n), dtype=bool)
